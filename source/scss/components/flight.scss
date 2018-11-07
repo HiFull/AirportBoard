@@ -1,0 +1,149 @@
+.flight {
+  border-bottom: 1px solid gray;
+  padding-bottom: 20px;
+
+  margin-bottom: 10px;
+}
+
+.flight__inner {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flight__extra-info {
+  display: none;
+}
+
+.flight__title {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.flight__from-to {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.flight__from {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.flight__to {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.flight__status {
+  margin: 0;
+}
+
+.flight__state {
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &--arrived {
+    color: green;
+  }
+}
+
+.flight__plane-desc {
+  word-break: break-word;
+  margin: 0;
+}
+
+.flight__plane {
+  text-transform: uppercase;
+  color: blue;
+
+}
+
+.flight__company-desc {
+  word-break: b;
+  margin: 0;
+}
+
+.flight__company {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.flight__button {
+  display: inline-block;
+
+  border: 2px solid black;
+  border-radius: 30px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  width: 100%;
+
+  margin: 0 auto;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .flight {
+    width: 334px;
+    margin-bottom: 20px;
+  }
+
+  .flight__inner {
+    display: flex;
+    min-height: 140px;
+  }
+
+  .flight__extra-info {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .flight {
+    width: 525px;
+    margin-bottom: 30px;
+  }
+
+  .flight__main-info {
+    width: 275px;
+  }
+
+  .flight__title {
+    font-size: 30px;
+  }
+
+  .flight__from-to {
+    font-size: 23px;
+  }
+
+  .flight__status {
+    font-size: 20px;
+  }
+
+  .flight__extra-info {
+    width: 260px;
+    flex-wrap: wrap;
+  }
+
+  .flight__plane-desc {
+    font-size: 23px;
+  }
+
+  .flight__company-desc {
+    font-size: 23px;
+  }
+}

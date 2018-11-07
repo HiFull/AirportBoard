@@ -1,0 +1,10 @@
+.page-title {
+  margin: 0;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .page-title {
+    font-size: 40px;
+  }
+}

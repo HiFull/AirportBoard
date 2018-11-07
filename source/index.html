@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Airport's Board</title>
+</head>
+<body>
+<div class="container">
+  <header class="page-header">
+    <h1 class="page-title">Airport's Board</h1>
+  </header>
+  <main class="main">
+    <section class="flight-filters">
+      <div class="flight-filters__filter filter">
+        <label class="filter__label" for="filter-control-flights">Flights:</label>
+        <select class="filter__item" name="flights" id="filter-control-flights">
+          <option value="" selected>All flights</option>
+          <option value="arrived">Arrived flights</option>
+          <option value="departed">Departed flights</option>
+          <option value="delayed">Delayed flights</option>
+        </select>
+      </div>
+
+      <div class="flight-filters__filter filter">
+        <label class="filter__label" for="flight-search">Search №:</label>
+        <input class="filter__item" type="text" placeholder="Flight's number:" id="flight-search">
+      </div>
+    </section>
+
+    <div class="board">
+      <!-- inner data.json -->
+      <div class="board__flight flight flight--arrived">
+        <h2 class="flight__title">Flight №2094</h2>
+        <div class="flight__inner">
+          <div class="flight__main-info">
+            <p class="flight__from-to">
+              From: <span class="flight__from">Moscow</span><br>
+              To: <span class="flight__to">Paris</span>
+            </p>
+            <p class="flight__status">
+              Status: <span class="flight__state flight__state--arrived">Arrived</span>
+            </p>
+          </div>
+          <div class="flight__extra-info">
+            <p class="flight__plane-desc">Plane: <span class="flight__plane">Airbus232</span></p>
+            <p class="flight__company-desc">Company: <a class="flight__company" href="#">Aeroflot</a></p>
+          </div>
+        </div>
+        <a href="#" class="flight__button">View Details</a>
+      </div>
+      <div class="board__flight flight">
+        <h2 class="flight__title">Flight №2094</h2>
+        <div class="flight__inner">
+          <div class="flight__main-info">
+            <p class="flight__from-to">
+              From: <span class="flight__from">Moscow</span><br>
+              To: <span class="flight__to">Paris</span>
+            </p>
+            <p class="flight__status">
+              Status: <span class="flight__state flight__state--arrived">Arrived</span>
+            </p>
+          </div>
+          <div class="flight__extra-info">
+            <p class="flight__plane-desc">Plane: <span class="flight__plane">Airbus232</span></p>
+            <p class="flight__company-desc">Company: <a class="flight__company" href="#">Aeroflot</a></p>
+          </div>
+        </div>
+        <a href="#" class="flight__button">View Details</a>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
