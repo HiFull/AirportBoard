@@ -24,7 +24,7 @@
       "id": 2,
       "flightNumber": "0661",
       "company": "German-Airlines",
-      "plane": "",
+      "plane": "ERONDONDON",
       "from": "Moscow",
       "to": "Paris",
       "status": "departed",
