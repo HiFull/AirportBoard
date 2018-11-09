@@ -20,7 +20,7 @@
 
   max-width: 500px;
   margin-bottom: 15px;
-  background-color: lightblue;
+  background-color: #a7afe4;
 
   &:last-child {
     margin-bottom: 0;
@@ -43,6 +43,12 @@
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 19px;
+  }
+
+  .filter__item {
+    font-size: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
   .filter__label {

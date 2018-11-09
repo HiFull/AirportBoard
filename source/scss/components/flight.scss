@@ -1,11 +1,19 @@
 .flight {
-  border-bottom: 1px solid gray;
+  border-top: 1px solid #ffffff;
+
+  &:last-child {
+    border-bottom: 1px solid #ffffff;
+  }
+}
+
+.flight__inner {
+  padding-top: 20px;
   padding-bottom: 20px;
 
   margin-bottom: 10px;
 }
 
-.flight__inner {
+.flight__content {
   padding-top: 10px;
   padding-bottom: 20px;
   display: flex;
@@ -65,8 +73,7 @@
 
 .flight__plane {
   text-transform: uppercase;
-  color: blue;
-
+  color: #2ccbc2;
 }
 
 .flight__company-desc {
@@ -76,12 +83,13 @@
 .flight__company {
   text-transform: uppercase;
   text-decoration: underline;
+  color: #ffffff;
 }
 
 .flight__button {
   display: inline-block;
 
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 30px;
 
   text-align: center;
@@ -89,27 +97,31 @@
 
   padding-top: 10px;
   padding-bottom: 10px;
+  background-color: #b9bbca;
 
   width: 100%;
 
   margin: 0 auto;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #b9bbda;
   }
 
   &:active {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #b9bbe8;
   }
 }
 
 @media (min-width: $tablet-width) {
-  .flight {
-    width: 100%;
+  .flight__inner {
     margin-bottom: 20px;
+    margin: 0 auto;
+    width: 550px;
+    padding-bottom: 30px;
   }
 
-  .flight__inner {
+  .flight__content {
+    width: 100%;
     display: flex;
     min-height: 140px;
   }
@@ -121,8 +133,15 @@
 
 @media (min-width: $desktop-width) {
   .flight {
+    &:nth-last-child(2) {
+      border-bottom: 1px solid #ffffff;
+    }
+  }
+
+  .flight__inner {
     width: 525px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 
   .flight__main-info {
