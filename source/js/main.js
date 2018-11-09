@@ -22,18 +22,17 @@ window.load = (function () {
 })();
 // =========================END AJAX======================================
 
-window.load(DATA_URL, function(data) {
+window.load(DATA_URL, function (data) {
   window.uploadData = data;
 
   renderContainer(data);
   window.filtersControl(data);
-  window.searchFlight(data);
 });
 
 function renderContainer(data) {
   flightsBoard.innerText = '';
   var flights = data;
-  if(!Array.isArray(data)) {
+  if (!Array.isArray(data)) {
     flights = data.flights;
   }
   flights.forEach(function (flight) {
@@ -76,11 +75,14 @@ window.flightRender = (function () {
 // =============================END RENDER==================================
 
 // FILTER
-window.filtersControl = (function() {
+window.filtersControl = (function (qualifiedName, value) {
   var filterControlFlights = document.querySelector('#filter-control-flights');
+  var searchControlFlights = document.querySelector('#flight-search');
   var filteredFlights = [];
 
-  return function(data) {
+  return function (data) {
+
+    // FILTERING
     filterControlFlights.addEventListener('change', onFiltersClick);
 
     function onFiltersClick(evt) {
@@ -97,11 +99,37 @@ window.filtersControl = (function() {
     }
 
     function getFilteredFlights(value) {
-      return data.flights.filter(function(flight) {
+      return data.flights.filter(function (flight) {
         if (Array.isArray(flight.status)) {
           return flight.status.indexOf(value) !== -1;
         } else {
           return flight.status === value;
+        }
+      });
+    }
+
+    // SEARCHING
+    searchControlFlights.addEventListener('search', onSearchSubmit);
+    function onSearchSubmit(evt) {
+      filterControlFlights.selectedIndex = 0;
+      renderFlightsBySearch(evt.target.value)
+    }
+
+    function renderFlightsBySearch(value) {
+      if (value) {
+        filteredFlights = getFoundFlights(value);
+      } else {
+        filteredFlights = uploadData;
+      }
+      renderContainer(filteredFlights)
+    }
+
+    function getFoundFlights(value) {
+      return data.flights.filter(function (flight) {
+        if (Array.isArray(flight.flightNumber)) {
+          return flight.flightNumber.indexOf(value) !== -1;
+        } else {
+          return flight.flightNumber === value;
         }
       });
     }
