@@ -48,6 +48,14 @@
   &--arrived {
     color: green;
   }
+
+  &--departed {
+    color: orange;
+  }
+
+  &--delayed {
+    color: red;
+  }
 }
 
 .flight__plane-desc {
@@ -62,7 +70,6 @@
 }
 
 .flight__company-desc {
-  word-break: b;
   margin: 0;
 }
 
@@ -98,7 +105,7 @@
 
 @media (min-width: $tablet-width) {
   .flight {
-    width: 334px;
+    width: 100%;
     margin-bottom: 20px;
   }
 
@@ -127,7 +134,7 @@
   }
 
   .flight__from-to {
-    font-size: 23px;
+    font-size: 21px;
   }
 
   .flight__status {
@@ -140,10 +147,10 @@
   }
 
   .flight__plane-desc {
-    font-size: 23px;
+    font-size: 21px;
   }
 
   .flight__company-desc {
-    font-size: 23px;
+    font-size: 21px;
   }
 }

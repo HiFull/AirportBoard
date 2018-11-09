@@ -2,6 +2,13 @@
   .board {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .board {
+    flex-direction: row;
   }
 }
