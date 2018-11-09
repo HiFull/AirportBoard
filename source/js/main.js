@@ -22,6 +22,7 @@ window.load = (function () {
 })();
 // =========================END AJAX======================================
 
+// MAIN
 window.load(DATA_URL, function (data) {
   window.uploadData = data;
 
@@ -35,10 +36,20 @@ function renderContainer(data) {
   if (!Array.isArray(data)) {
     flights = data.flights;
   }
+
+  if (!flights.length) {
+    var noresult = document.createElement('div');
+    noresult.classList.add('board__noresult');
+    noresult.innerText = 'No Results';
+    flightsBoard.appendChild(noresult);
+
+  }
+
   flights.forEach(function (flight) {
     flightsBoard.appendChild(window.flightRender(flight, data));
   });
 }
+// =========================END MAIN======================================
 
 // RENDER
 window.flightRender = (function () {
@@ -75,7 +86,7 @@ window.flightRender = (function () {
 // =============================END RENDER==================================
 
 // FILTER
-window.filtersControl = (function (qualifiedName, value) {
+window.filtersControl = (function () {
   var filterControlFlights = document.querySelector('#filter-control-flights');
   var searchControlFlights = document.querySelector('#flight-search');
   var filteredFlights = [];
@@ -107,6 +118,7 @@ window.filtersControl = (function (qualifiedName, value) {
         }
       });
     }
+    // =========================END FILTERING===============================
 
     // SEARCHING
     searchControlFlights.addEventListener('search', onSearchSubmit);
@@ -133,6 +145,7 @@ window.filtersControl = (function (qualifiedName, value) {
         }
       });
     }
+    // =========================END SEARCHING===============================
   };
 })();
 // =============================END FILTER==================================
