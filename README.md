@@ -7,7 +7,7 @@ Options:
   * look delayed flights
   * search flight by number
 
-To test: 
+For test: 
   * Download/Clone
   * npm i
   * npm start
