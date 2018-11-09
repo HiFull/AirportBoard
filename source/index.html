@@ -31,46 +31,31 @@
 
     <div class="board">
       <!-- inner data.json -->
-      <div class="board__flight flight flight--arrived">
-        <h2 class="flight__title">Flight №2094</h2>
-        <div class="flight__inner">
-          <div class="flight__main-info">
-            <p class="flight__from-to">
-              From: <span class="flight__from">Moscow</span><br>
-              To: <span class="flight__to">Paris</span>
-            </p>
-            <p class="flight__status">
-              Status: <span class="flight__state flight__state--arrived">Arrived</span>
-            </p>
-          </div>
-          <div class="flight__extra-info">
-            <p class="flight__plane-desc">Plane: <span class="flight__plane">Airbus232</span></p>
-            <p class="flight__company-desc">Company: <a class="flight__company" href="#">Aeroflot</a></p>
-          </div>
-        </div>
-        <a href="#" class="flight__button">View Details</a>
-      </div>
-      <div class="board__flight flight">
-        <h2 class="flight__title">Flight №2094</h2>
-        <div class="flight__inner">
-          <div class="flight__main-info">
-            <p class="flight__from-to">
-              From: <span class="flight__from">Moscow</span><br>
-              To: <span class="flight__to">Paris</span>
-            </p>
-            <p class="flight__status">
-              Status: <span class="flight__state flight__state--arrived">Arrived</span>
-            </p>
-          </div>
-          <div class="flight__extra-info">
-            <p class="flight__plane-desc">Plane: <span class="flight__plane">Airbus232</span></p>
-            <p class="flight__company-desc">Company: <a class="flight__company" href="#">Aeroflot</a></p>
-          </div>
-        </div>
-        <a href="#" class="flight__button">View Details</a>
-      </div>
     </div>
   </main>
 </div>
+
+<template id="flight-template" style="display: none">
+  <div class="board__flight flight">
+    <h2 class="flight__title"></h2>
+    <div class="flight__inner">
+      <div class="flight__main-info">
+        <p class="flight__from-to">
+          From: <span class="flight__from"></span><br>
+          To: <span class="flight__to"></span>
+        </p>
+        <p class="flight__status">
+          Status: <span class="flight__state"></span>
+        </p>
+      </div>
+      <div class="flight__extra-info">
+        <p class="flight__plane-desc">Plane: <span class="flight__plane"></span></p>
+        <p class="flight__company-desc">Company: <a class="flight__company" href="#"></a></p>
+      </div>
+    </div>
+    <a href="#" class="flight__button">View Details</a>
+  </div>
+</template>
+<script src="js/main.js"></script>
 </body>
 </html>
