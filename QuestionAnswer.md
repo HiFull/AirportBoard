@@ -22,8 +22,8 @@
     
     ```
     setInterval(function() {
-      setInterval(ticker.tick(), 1000);
-    });
+      ticker.tick();
+    }, 1000);
     ```
     
   </li>
