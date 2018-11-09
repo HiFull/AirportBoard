@@ -1,8 +1,8 @@
 {
-  "name": "yandextest",
+  "name": "Airport'sBoard",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "start": "gulp start"
   },
@@ -15,5 +15,13 @@
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiFull/YandexTest.git"
+  },
+  "bugs" : "https://github.com/HiFull/YandexTest/issues",
+  "homepage": {
+    "url": "https://github.com/HiFull/YandexTest"
   }
 }
