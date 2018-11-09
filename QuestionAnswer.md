@@ -20,17 +20,21 @@
   <li>
     Передать в setInterval функцию обёртку с ticker.tick. Из-за замыкания в JS контекст будет передаваться и
     всё будет будет работать корректно =>
+    
     ```javascript
     setInterval(function() {
       setInterval(ticker.tick(), 1000);
     });
     ```
+    
   </li>
   <li>
     Встроенные средства JS позволяют привязывать контекст выполнения функции built-in методом .bind().Он привязывает контекст к функции.
     Таким образом, мы передадим в setInterval вызов метода ticker с привязкой к контексту объекта =>
+  
     ```javascript
     setInterval(ticker.tick.bind(ticker), 1000);
     ```
+    
   </li>
 </ul>
