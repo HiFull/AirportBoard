@@ -1,0 +1,64 @@
+{
+  "flights": [
+    {
+      "id": 0,
+      "flightNumber": "2301",
+      "company": "Aeroflot",
+      "plane": "Airbus232",
+      "from": "Moscow",
+      "to": "Paris",
+      "status": "arrived",
+      "date": "2018-08-09T18:30:00"
+    },
+    {
+      "id": 1,
+      "flightNumber": "1111",
+      "company": "Transaero",
+      "plane": "BOEING-777-33",
+      "from": "Atlanta",
+      "to": "Amsterdam",
+      "status": "arrived",
+      "date": "2018-08-09T18:30:00"
+    },
+    {
+      "id": 2,
+      "flightNumber": "0661",
+      "company": "German-Airlines",
+      "plane": "",
+      "from": "Moscow",
+      "to": "Paris",
+      "status": "departed",
+      "date": "2018-08-09T18:30:00"
+    },
+    {
+      "id": 3,
+      "flightNumber": "9811",
+      "company": "Aeroflot",
+      "plane": "Airbus232",
+      "from": "Moscow",
+      "to": "Paris",
+      "status": "delayed",
+      "date": "2017-08-09T18:30:00"
+    },
+    {
+      "id": 4,
+      "flightNumber": "1231",
+      "company": "Aeroflot",
+      "plane": "Airbus232",
+      "from": "Moscow",
+      "to": "Paris",
+      "status": "arrived",
+      "date": "2017-08-09T18:30:00"
+    },
+    {
+      "id": 5,
+      "flightNumber": "4444",
+      "company": "Aeroflot",
+      "plane": "Airbus232",
+      "from": "Moscow",
+      "to": "Paris",
+      "status": "delayed",
+      "date": "2017-08-09T18:30:00"
+    }
+  ]
+}
