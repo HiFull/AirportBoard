@@ -1,0 +1,302 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
+  background-color: #1a1f44;
+  font-family: "OpenSans", "Arial", sans-serif;
+  color: #ffffff;
+  font-weight: normal;
+  font-style: normal; }
+
+a {
+  text-decoration: none;
+  color: #000000; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+.container {
+  width: 320px;
+  padding: 0 30px;
+  margin: 0 auto; }
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px; } }
+
+@media (min-width: 1150px) {
+  .container {
+    width: 1150px; } }
+
+.page-title {
+  margin: 0 auto;
+  text-align: center; }
+
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 40px; } }
+
+@media (min-width: 1150px) {
+  .page-title {
+    font-size: 53px; } }
+
+.page-header {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background: linear-gradient(to bottom, #070808, #1a1f44); }
+
+.board {
+  padding-bottom: 40px; }
+
+.board__noresult {
+  font-size: 30px;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: underline;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+@media (min-width: 768px) {
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between; }
+  .board__noresult {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 60px; } }
+
+@media (min-width: 1150px) {
+  .board {
+    flex-direction: row;
+    width: 1150px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto; }
+  .board__noresult {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-size: 90px; } }
+
+.flight-filters {
+  padding-top: 20px;
+  padding-bottom: 10px; }
+
+@media (min-width: 768px) {
+  .flight-filters {
+    padding-bottom: 50px; }
+  .flight-filters__item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 19px; } }
+
+@media (min-width: 1150px) {
+  .flight-filters {
+    display: flex;
+    align-items: flex-start; }
+  .flight-filters__item {
+    margin-bottom: 0; } }
+
+.filter {
+  padding-bottom: 15px; }
+  .filter:last-child {
+    padding-bottom: 0; }
+
+.filter__item {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 5px;
+  max-width: 500px;
+  margin-bottom: 15px;
+  background-color: #a7afe4; }
+  .filter__item:last-child {
+    margin-bottom: 0; }
+
+.filter__label {
+  display: block;
+  padding-bottom: 5px;
+  font-size: 15px; }
+
+@media (min-width: 768px) {
+  .filter {
+    width: 500px;
+    margin: 0 auto; }
+  .flight-filters__item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 19px; }
+  .filter__item {
+    font-size: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px; }
+  .filter__label {
+    font-weight: bold;
+    font-size: 19px;
+    padding-bottom: 10px; } }
+
+@media (min-width: 1150px) {
+  .flight-filters__item {
+    margin-bottom: 0; }
+  .filter__label {
+    font-size: 23px; } }
+
+.flight {
+  border-top: 1px solid #ffffff; }
+  .flight:last-child {
+    border-bottom: 1px solid #ffffff; }
+
+.flight__inner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 10px; }
+
+.flight__content {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between; }
+
+.flight__extra-info {
+  display: none; }
+
+.flight__title {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 10px; }
+
+.flight__from-to {
+  margin: 0;
+  padding-bottom: 10px; }
+
+.flight__from {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.flight__to {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.flight__status {
+  margin: 0; }
+
+.flight__state {
+  font-weight: bold;
+  text-transform: uppercase; }
+  .flight__state--arrived {
+    color: green; }
+  .flight__state--departed {
+    color: orange; }
+  .flight__state--delayed {
+    color: red; }
+
+.flight__plane-desc {
+  word-break: break-word;
+  margin: 0; }
+
+.flight__plane {
+  text-transform: uppercase;
+  color: #2ccbc2; }
+
+.flight__company-desc {
+  margin: 0; }
+
+.flight__company {
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #ffffff; }
+
+.flight__button {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 30px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #b9bbca;
+  width: 100%;
+  margin: 0 auto; }
+  .flight__button:hover {
+    background-color: #b9bbda; }
+  .flight__button:active {
+    background-color: #b9bbe8; }
+
+@media (min-width: 768px) {
+  .flight__inner {
+    margin-bottom: 20px;
+    margin: 0 auto;
+    width: 550px;
+    padding-bottom: 30px; }
+  .flight__content {
+    width: 100%;
+    display: flex;
+    min-height: 140px; }
+  .flight__extra-info {
+    display: block; } }
+
+@media (min-width: 1150px) {
+  .flight:nth-last-child(2) {
+    border-bottom: 1px solid #ffffff; }
+  .flight__inner {
+    width: 525px;
+    margin-bottom: 20px;
+    padding-bottom: 20px; }
+  .flight__main-info {
+    width: 275px; }
+  .flight__title {
+    font-size: 30px; }
+  .flight__from-to {
+    font-size: 21px; }
+  .flight__status {
+    font-size: 20px; }
+  .flight__extra-info {
+    width: 260px;
+    flex-wrap: wrap; }
+  .flight__plane-desc {
+    font-size: 21px; }
+  .flight__company-desc {
+    font-size: 21px; } }

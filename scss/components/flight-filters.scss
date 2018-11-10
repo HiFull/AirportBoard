@@ -1,0 +1,27 @@
+.flight-filters {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .flight-filters {
+    padding-bottom: 50px;
+  }
+
+  .flight-filters__item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .flight-filters {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .flight-filters__item {
+    margin-bottom: 0;
+  }
+}
