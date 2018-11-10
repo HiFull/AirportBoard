@@ -2,7 +2,7 @@
   "name": "Airport'sBoard",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "js/main.js",
   "scripts": {
     "start": "gulp start"
   },
