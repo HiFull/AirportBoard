@@ -42,7 +42,6 @@ function renderContainer(data) {
     noresult.classList.add('board__noresult');
     noresult.innerText = 'No Results';
     flightsBoard.appendChild(noresult);
-
   }
 
   flights.forEach(function (flight) {
@@ -122,6 +121,7 @@ window.filtersControl = (function () {
 
     // SEARCHING
     searchControlFlights.addEventListener('search', onSearchSubmit);
+
     function onSearchSubmit(evt) {
       filterControlFlights.selectedIndex = 0;
       renderFlightsBySearch(evt.target.value)
