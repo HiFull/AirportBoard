@@ -9,27 +9,27 @@ var
   autoprefixer = require("autoprefixer");
 
 gulp.task("css", function () {
-  return gulp.src("source/scss/style.scss")
+  return gulp.src("scss/style.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("css"))
     .pipe(server.stream());
 });
 
 gulp.task("server", function () {
   server.init({
-    server: "source/",
+    server: "",
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  gulp.watch("source/scss/**/*.scss", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("scss/**/*.scss", gulp.series("css"));
+  gulp.watch("*.html").on("change", server.reload);
 });
 
 gulp.task("start", gulp.series("css", "server"));
