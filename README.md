@@ -1,6 +1,6 @@
 # Airport's Board
 
-## Demo: https://hifull.github.io/YandexTest/
+## Demo: https://hifull.github.io/AirportBoard/
 
 Options:
   * look all flights
@@ -14,4 +14,4 @@ For test:
   * npm i
   * npm start
 
-## Answer on the second question: https://github.com/HiFull/YandexTest/blob/master/QuestionAnswer.md
+## Answer on the second question: https://github.com/HiFull/AirportBoard/blob/master/QuestionAnswer.md
